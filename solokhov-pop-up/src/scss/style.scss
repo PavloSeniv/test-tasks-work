@@ -1,0 +1,347 @@
+/*-------- Write Fonts Start -------*/
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+/*-------- Write Fonts End -------*/
+
+/*-------- Import Start -------*/
+@import "_fonts";
+//@import "_libs";
+@import "_media";
+@import "_nullstyle";
+@import "_vars";
+@import "_mixin";
+@import "_vars";
+// @import "header/_style_header";
+// @import "footer/_style_footer";
+/*-------- Import End -------*/
+
+/*-------- Page Index Start -------*/
+
+/*-------- All Start -------*/
+body {
+  background-color: #acacac;
+}
+
+* {
+  color: #000000;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: #000;
+}
+
+.__container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 46px 39px;
+  @media (max-width: 1199px) {
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: #bdbdbd;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1f5e37;
+  background-image: -webkit-gradient(
+    linear,
+    0 0,
+    0 100%,
+    color-stop(0.5, rgba(255, 255, 255, 0.25)),
+    color-stop(0.5, transparent),
+    to(transparent)
+  );
+}
+
+/*-------- All End -------*/
+
+/*-------- Main Start -------*/
+
+.block-pop-up-modal {
+  max-width: 1842px;
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 1199px) {
+  }
+}
+.modal {
+  background-color: #fff;
+  padding: 18px 20px 20px 60px;
+  position: relative;
+}
+.block-pop-up {
+  &__title {
+    width: 80%;
+    height: 16px;
+  }
+
+  &__title-data {
+    display: flex;
+    column-gap: 5px;
+  }
+
+  &__title-data-tower-block {
+  }
+
+  &__title-data-tower-title {
+    font-family: times;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+    text-decoration: underline;
+  }
+
+  &__title-data-tower-sub-title {
+    font-family: times;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #acacac;
+    text-transform: uppercase;
+  }
+
+  &__title-data-square-block {
+  }
+
+  &__title-data-square-title {
+    font-family: times;
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+  }
+
+  &__title-data-square-sub-title {
+    font-family: times;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #acacac;
+    text-transform: uppercase;
+  }
+
+  &__close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__column {
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 56px;
+    column-gap: 106px;
+  }
+
+  &__card {
+    width: 802px;
+    height: 452px;
+  }
+  &__card-parallelogram-head {
+    width: 300px;
+    position: relative;
+    top: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 50px;
+    z-index: 1;
+    &::before {
+      border: solid 1px #979797;
+    }
+
+    &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    border-bottom: #979797;
+    background: #fff;
+    transform: perspective(1.5em) rotateX(2deg);
+    transform-origin: bottom left;
+    }
+  }
+
+  &__card-title {
+    font-family: times;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+   
+  }
+
+  &__card-column {
+    border: solid 1px #979797;
+    padding: 42px 60px 66px 56px;
+    display: flex;
+    width: 100%;
+  }
+  
+  &__card-column-button {
+  height: 34px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: solid 1px #979797;
+  background-color: #d8d8d8;  
+ 
+  font-family: times;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000
+}
+
+  &__card-column-data {
+    text-align: left;
+    flex: 0 0 50%;
+    font-family: times;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+  }
+
+  &__card-column-data-adress {
+  }
+
+  &__card-column-data-count-square {
+    margin-top: 22px;
+  }
+
+  &__card-column-data-count-auto {
+    margin-top: 22px;
+  }
+
+  &__card-column-data-placeholder {
+    margin-top: 22px;
+    background-color: #d8d8d8;
+    height: 11px;
+  }
+
+  &__card-column-user-data {
+    flex: 0 0 50%;
+    font-family: times;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  &__card-column-user-data-adress {
+  }
+
+  &__card-column-user-data-count-square {
+    margin-top: 22px;
+  }
+
+  &__card-column-userdata-count-auto {
+    margin-top: 22px;
+  }
+
+  &__card-column-user-data-placeholder {
+    margin-top: 22px;
+    background-color: #d8d8d8;
+    height: 11px;
+  }
+}
+
+.button-block{
+display: flex;
+row-gap: 20px;
+column-gap: 30px;
+flex-wrap: wrap;
+}
+.card-1 {
+}
+.placeholder-1 {
+  width: 224px;
+}
+.placeholder-2 {
+  width: 272px;
+}
+.placeholder-3 {
+  width: 197px;
+}
+.placeholder-4 {
+  width: 209px;
+}
+.placeholder-5 {
+  width: 186px;
+}
+.placeholder-6 {
+  width: 224px;
+}
+.placeholder-7 {
+  width: 139px;
+}
+.placeholder-8 {
+  width: 163px;
+}
+.placeholder-9 {
+  width: 133px;
+}
+.placeholder-10 {
+  width: 116px;
+}
+.placeholder-11 {
+  width: 93px;
+}
+.placeholder-12 {
+  width: 139px;
+}
+
+/*-------- Main End -------*/
