@@ -230,8 +230,8 @@ h6 {
   width: 80%;
   height: 16px;
   display: flex;
-  -moz-column-gap: 5px;
-       column-gap: 5px;
+  -moz-column-gap: 3px;
+       column-gap: 3px;
 }
 
 .pop-up__data-tower-title {
@@ -243,7 +243,18 @@ h6 {
   line-height: normal;
   letter-spacing: normal;
   color: #000;
-  text-decoration: underline;
+  position: relative;
+}
+
+.pop-up__data-tower-title::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .pop-up__data-tower-sub-title {
@@ -256,6 +267,13 @@ h6 {
   letter-spacing: normal;
   color: #acacac;
   text-transform: uppercase;
+  position: relative;
+  top: 1px;
+}
+
+.pop-up__slash {
+  position: relative;
+  top: 2px;
 }
 
 .pop-up__data-square-title {
@@ -279,6 +297,9 @@ h6 {
   letter-spacing: normal;
   color: #acacac;
   text-transform: uppercase;
+  position: relative;
+  top: 1px;
+  left: 1px;
 }
 
 .pop-up__close {
@@ -472,6 +493,34 @@ h6 {
   top: -129px;
   left: 2px;
   grid-area: card-4;
+}
+
+.tabs-1 {
+  padding: 14px 73px 14px 56px;
+}
+
+.tabs-2 {
+  padding: 14px 76px 14px 56px;
+}
+
+.tabs-2::before {
+  transform: perspective(1.5em) rotateX(2.8deg);
+}
+
+.tabs-3 {
+  padding: 14px 56px 14px 56px;
+}
+
+.tabs-3::before {
+  transform: perspective(1.5em) rotateX(1.5deg);
+}
+
+.tabs-4 {
+  padding: 18px 80px 14px 55px;
+}
+
+.tabs-4::before {
+  transform: perspective(1.5em) rotateX(2.6deg);
 }
 
 .card-2-list-1 {
