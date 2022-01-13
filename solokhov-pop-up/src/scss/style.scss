@@ -52,16 +52,16 @@ body {
 
 ::-webkit-scrollbar-track {
   box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
-  background-color: #bdbdbd;
+  background-color: #acacac;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #1f5e37;
+  background-color: #000000;
   background-image: -webkit-gradient(
     linear,
     0 0,
     0 100%,
-    color-stop(0.5, rgba(255, 255, 255, 0.25)),
+    color-stop(0.5, rgba(190, 186, 186, 0.349)),
     color-stop(0.5, transparent),
     to(transparent)
   );
@@ -80,7 +80,7 @@ body {
 }
 .modal {
   background-color: #fff;
-  padding: 18px 20px 20px 60px;
+  padding: 30px 20px 20px 60px;
   position: relative;
 }
 .block-pop-up {
@@ -149,8 +149,8 @@ body {
 
   &__close {
     position: absolute;
-    top: 18px;
-    right: 20px;
+    top: 23px;
+    right: 14px;
     &:hover {
       cursor: pointer;
     }
@@ -159,7 +159,7 @@ body {
   &__column {
     display: flex;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 47px;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 56px;
@@ -171,14 +171,15 @@ body {
     height: 452px;
   }
   &__card-parallelogram-head {
-    width: 300px;
+    
     position: relative;
     top: 1px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    height: 50px;
+    padding: 14px 70px 14px 56px;
+    height: 53px;
     z-index: 1;
     &::before {
       border: solid 1px #979797;
@@ -212,8 +213,8 @@ body {
   }
 
   &__card-column {
-    border: solid 1px #979797;
-    padding: 42px 60px 66px 56px;
+       border: solid 1px #979797;
+    padding: 38px 60px 74px 55px;
     display: flex;
     width: 100%;
   }
