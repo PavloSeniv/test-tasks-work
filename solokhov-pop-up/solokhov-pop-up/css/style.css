@@ -64,7 +64,7 @@ aside {
 
 html,
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   font-size: 100%;
   line-height: 1;
@@ -124,10 +124,6 @@ h6 {
 /*-------- Import End -------*/
 /*-------- Page Index Start -------*/
 /*-------- All Start -------*/
-body {
-  background-color: #acacac;
-}
-
 * {
   color: #000000;
 }
@@ -138,9 +134,19 @@ body {
 }
 
 .__container {
+  display: none;
   max-width: 1920px;
   margin: 0 auto;
   padding: 46px 39px;
+  background-color: #acacac;
+  opacity: 0;
+  pointer-events: none;
+}
+.__container.active {
+  display: block;
+  opacity: 1;
+  pointer-events: all;
+  transition: 0.5s all;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -158,6 +164,39 @@ body {
 
 /*-------- All End -------*/
 /*-------- Main Start -------*/
+.block-button-show-modal {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.block-button-show-modal.active {
+  display: none;
+}
+
+.open-popup {
+  height: 34px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: solid 1px #979797;
+  background-color: #d8d8d8;
+  font-family: times;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+  display: block;
+}
+.open-popup.active {
+  display: none;
+}
+
 .block-pop-up-modal {
   max-width: 1842px;
   width: 100%;

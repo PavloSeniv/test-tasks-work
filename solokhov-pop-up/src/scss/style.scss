@@ -25,10 +25,6 @@
 /*-------- Page Index Start -------*/
 
 /*-------- All Start -------*/
-body {
-  background-color: #acacac;
-}
-
 * {
   color: #000000;
 }
@@ -39,9 +35,21 @@ body {
 }
 
 .__container {
+  display: none;
   max-width: 1920px;
   margin: 0 auto;
   padding: 46px 39px;
+  background-color: #acacac;
+  opacity: 0; // Скрываем фон и сам попап
+  pointer-events: none; // Запрещаем ему быть целью событий
+
+  &.active {
+    display: block;
+    // При добавлении класса 'active'
+    opacity: 1; // Показываем фон и попап
+    pointer-events: all; // Возвращаем события
+    transition: 0.5s all;
+  }
   @media (max-width: 1199px) {
   }
 }
@@ -70,6 +78,39 @@ body {
 /*-------- All End -------*/
 
 /*-------- Main Start -------*/
+.block-button-show-modal {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  &.active {
+    display: none;
+  }
+}
+
+.open-popup {
+  height: 34px;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: solid 1px #979797;
+  background-color: #d8d8d8;
+
+  font-family: times;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000;
+  display: block;
+  &.active {
+    display: none;
+  }
+}
 
 .block-pop-up-modal {
   max-width: 1842px;
@@ -78,11 +119,13 @@ body {
   @media (max-width: 1199px) {
   }
 }
+
 .modal {
   background-color: #fff;
   padding: 30px 20px 20px 60px;
   position: relative;
 }
+
 .block-pop-up {
   &__title {
     width: 80%;
@@ -171,7 +214,6 @@ body {
     height: 452px;
   }
   &__card-parallelogram-head {
-    
     position: relative;
     top: 1px;
     display: inline-flex;
@@ -186,17 +228,17 @@ body {
     }
 
     &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    border-bottom: #979797;
-    background: #fff;
-    transform: perspective(1.5em) rotateX(2deg);
-    transform-origin: bottom left;
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border-bottom: #979797;
+      background: #fff;
+      transform: perspective(1.5em) rotateX(2deg);
+      transform-origin: bottom left;
     }
   }
 
@@ -209,32 +251,31 @@ body {
     line-height: normal;
     letter-spacing: normal;
     color: #000;
-   
   }
 
   &__card-column {
-       border: solid 1px #979797;
+    border: solid 1px #979797;
     padding: 38px 60px 74px 55px;
     display: flex;
     width: 100%;
   }
-  
+
   &__card-column-button {
-  height: 34px;
-  padding: 9px 10px;
-  border-radius: 10px;
-  border: solid 1px #979797;
-  background-color: #d8d8d8;  
- 
-  font-family: times;
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #000
-}
+    height: 34px;
+    padding: 9px 10px;
+    border-radius: 10px;
+    border: solid 1px #979797;
+    background-color: #d8d8d8;
+
+    font-family: times;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+  }
 
   &__card-column-data {
     text-align: left;
@@ -300,11 +341,11 @@ body {
   }
 }
 
-.button-block{
-display: flex;
-row-gap: 20px;
-column-gap: 30px;
-flex-wrap: wrap;
+.button-block {
+  display: flex;
+  row-gap: 20px;
+  column-gap: 30px;
+  flex-wrap: wrap;
 }
 .card-1 {
 }
