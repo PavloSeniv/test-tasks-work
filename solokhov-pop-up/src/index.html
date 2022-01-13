@@ -6,158 +6,133 @@
 })
 
 <body>
-  <div class="block-button-show-modal">
-    <a href="#" class="open-popup">Открыть попап</a>
-  </div>
 
-  <div class="__container">
-    <div class="block-pop-up-modal modal">
-      <div class="block-pop-up">
-        <div class="block-pop-up__title">
-          <div class="block-pop-up__title-data">
-            <div class="block-pop-up__title-data-tower-block">
-              <p class="block-pop-up__title-data-tower-title">Бизнес центр Space Tower </p>
-              <p class="block-pop-up__title-data-tower-sub-title">Здание</p>
-            </div>
-            /
-            <div class="block-pop-up__title-data-square-block">
-              <p class="block-pop-up__title-data-square-title">Офисное помещение 1862 кв.м</p>
-              <p class="block-pop-up__title-data-square-sub-title">Офисное помещение</p>
-            </div>
-          </div>
+  <main class="main__container __container-1">
+    <button class="main__button-open-pop-up">Открыть попап</button>
+  </main>
+
+  <div class="pop-up pop-up__bg-container __container-2">
+    <div class="pop-up__dialog">
+
+      <div class="pop-up__title">
+        <div class="pop-up__data-tower">
+          <h2 class="pop-up__data-tower-title">Бизнес центр Space Tower </h2>
+          <p class="pop-up__data-tower-sub-title">Здание</p>
+        </div>
+        <span>
+          /
+        </span>
+        <div class="pop-up__data-square">
+          <h2 class="pop-up__data-square-title">Офисное помещение 1862 кв.м</h2>
+          <p class="pop-up__data-square-sub-title">Офисное помещение</p>
         </div>
       </div>
 
-      <div class="block-pop-up__close close-popup">
-        <img src="img/index/combined-shape.png" alt="combined-shape" class="">
+      <div class="pop-up__close">
+        <svg width="30" height="30" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15 14.293 28.789.504l.707.707L15.707 15l13.789 13.789-.707.707L15 15.707 1.211 29.496l-.707-.707L14.293 15 .504 1.211l.707-.707L15 14.293z"
+            fill="#000" fill-rule="evenodd" />
+        </svg>
       </div>
 
-      <div class="block-pop-up__column">
-        <div class="block-pop-up__card card-1">
-          <div class="block-pop-up__card-parallelogram-head">
-            <h3 class="block-pop-up__card-title">Параметры здания</h3>
+      <div class="pop-up__row">
+        <div class="pop-up__card card-1">
+          <div class="pop-up__tabs">
+            <h3 class="pop-up__tabs-title">Параметры здания</h3>
           </div>
-          <div class="block-pop-up__card-column card-column-1">
-            <div class="block-pop-up__card-column-data">
-              <p class="block-pop-up__card-column-data-adress">Адрес</p>
-              <p class="block-pop-up__card-column-data-count-square">Общая площадь офисных помещений:</p>
-              <p class="block-pop-up__card-column-data-count-auto">Общее количество машиномест: </p>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-1"></div>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-2"></div>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-3"></div>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-4"></div>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-5"></div>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-6"></div>
-            </div>
-            <div class="block-pop-up__card-column-user-data">
-              <p class="block-pop-up__card-column-user-data-adress">Москва, Шмитовский проезде, 37</p>
-              <p class="block-pop-up__card-column-user-data-count-square">19 649 кв.м</p>
-              <p class="block-pop-up__card-column-userdata-count-auto">487 мм</p>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-7"></div>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-8"></div>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-9"></div>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-10"></div>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-11"></div>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-12"></div>
-            </div>
-          </div>
-        </div>
-        <div class="block-pop-up__card card-2">
-          <div class="block-pop-up__card-parallelogram-head">
-            <h3 class="block-pop-up__card-title">Договор</h3>
-          </div>
-          <div class="block-pop-up__card-column card-column-2">
-            <div class="block-pop-up__card-column-data">
-              <p class="block-pop-up__card-column-data-adress">Номер договора:</p>
-              <p class="block-pop-up__card-column-data-count-square">Дата заключения договора:</p>
-              <p class="block-pop-up__card-column-data-count-auto">Дата начала действия договора:</p>
-              <p class="block-pop-up__card-column-data-count-auto">Дата завершение действия договора:</p>
-              <p class="block-pop-up__card-column-data-count-auto">Стоимость за кв.м в год:</p>
-              <p class="block-pop-up__card-column-data-count-auto">Стоимость аренды в месяц:</p>
+          <div class="pop-up__row-card row-card-1">
+            <ul class="pop-up__card-list-1">
+              <li>Адрес</li>
+              <li>Общая площадь офисных помещений:</li>
+              <li>Общее количество машиномест: </li>
+              <li class="pop-up__placeholder placeholder-1"></li>
+              <li class="pop-up__placeholder placeholder-2"></li>
+              <li class="pop-up__placeholder placeholder-3"></li>
+              <li class="pop-up__placeholder placeholder-4"></li>
+              <li class="pop-up__placeholder placeholder-5"></li>
+              <li class="pop-up__placeholder placeholder-6"></li>
+            </ul>
 
-            </div>
-            <div class="block-pop-up__card-column-user-data">
-              <p class="block-pop-up__card-column-user-data-adress">№091220</p>
-              <p class="block-pop-up__card-column-user-data-count-square">15 ноября 2020 года</p>
-              <p class="block-pop-up__card-column-userdata-count-auto">09 декабря 2020 года</p>
-              <p class="block-pop-up__card-column-userdata-count-auto">09 ноября 2021 года</p>
-              <p class="block-pop-up__card-column-userdata-count-auto">2 750 руб за м. кв</p>
-              <p class="block-pop-up__card-column-userdata-count-auto">6 077 500 руб</p>
+            <ul class="pop-up__card-list-2">
+              <li>Москва, Шмитовский проезде, 37</li>
+              <li>19 649 кв.м</li>
+              <li>487 мм</li>
+              <li class="pop-up__placeholder placeholder-7"></li>
+              <li class="pop-up__placeholder placeholder-8"></li>
+              <li class="pop-up__placeholder placeholder-9"></li>
+              <li class="pop-up__placeholder placeholder-10"></li>
+              <li class="pop-up__placeholder placeholder-11"></li>
+              <li class="pop-up__placeholder placeholder-12"></li>
+            </ul>
+          </div>
+        </div>
 
-            </div>
+        <div class="pop-up__card card-2">
+          <div class="pop-up__tabs">
+            <h3 class="pop-up__tabs-title">Договор</h3>
+          </div>
+          <div class="pop-up__row-card row-card-2">
+            <ul class="pop-up__card-list-1 card-2-list-1">
+              <li>Номер договора:</li>
+              <li>Дата заключения договора:</li>
+              <li>Дата начала действия договора:</li>
+              <li>Дата завершение действия договора:</li>
+              <li>Стоимость за кв.м в год:</li>
+              <li>Стоимость аренды в месяц:</li>
+            </ul>
+
+            <ul class="pop-up__card-list-2 card-2-list-2">
+              <li>№091220</li>
+              <li>15 ноября 2020 года</li>
+              <li>09 декабря 2020 года</li>
+              <li>09 ноября 2021 года</li>
+              <li>2 750 руб за м. кв</li>
+              <li>6 077 500 руб</li>
+            </ul>
           </div>
         </div>
-        <div class="block-pop-up__card card-3">
-          <div class="block-pop-up__card-parallelogram-head">
-            <h3 class="block-pop-up__card-title">Параметры офисного помещения</h3>
+
+        <div class="pop-up__card card-3">
+          <div class="pop-up__tabs">
+            <h3 class="pop-up__tabs-title">Параметры офисного помещения</h3>
           </div>
-          <div class="block-pop-up__card-column card-column-3">
-            <div class="block-pop-up__card-column-data">
-              <p class="block-pop-up__card-column-data-adress">Площадь:</p>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-1"></div>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-2"></div>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-3"></div>
-              <div class="block-pop-up__card-column-data-placeholder placeholder-4"></div>
-            </div>
-            <div class="block-pop-up__card-column-user-data">
-              <p class="block-pop-up__card-column-user-data-adress">1862 кв.м</p>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-7"></div>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-8"></div>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-9"></div>
-              <div class="block-pop-up__card-column-user-data-placeholder placeholder-10"></div>
-            </div>
-          </div>
-        </div>
-        <div class="block-pop-up__card card-4">
-          <div class="block-pop-up__card-parallelogram-head">
-            <h3 class="block-pop-up__card-title">Группы</h3>
-          </div>
-          <div class="block-pop-up__card-column card-column-4 button-block">
-            <div class="block-pop-up__card-column-button">Сдано в аренду</div>
-            <div class="block-pop-up__card-column-button">Помещения для аренды</div>
-            <div class="block-pop-up__card-column-button">Офис класса А</div>
-            <div class="block-pop-up__card-column-button">Москва Сити</div>
-            <div class="block-pop-up__card-column-button">Помещения для аренды</div>
-            <div class="block-pop-up__card-column-button">Офис класса А</div>
+          <div class="pop-up__row-card row-card-3">
+            <ul class="pop-up__card-list-1">
+              <li>Площадь:</li>
+              <li class="pop-up__placeholder placeholder-13"></li>
+              <li class="pop-up__placeholder placeholder-14"></li>
+              <li class="pop-up__placeholder placeholder-15"></li>
+              <li class="pop-up__placeholder placeholder-16"></li>
+            </ul>
+
+            <ul class="pop-up__card-list-2">
+              <li>1862 кв.м</li>
+              <li class="pop-up__placeholder placeholder-17"></li>
+              <li class="pop-up__placeholder placeholder-18"></li>
+              <li class="pop-up__placeholder placeholder-19"></li>
+              <li class="pop-up__placeholder placeholder-20"></li>
+            </ul>
           </div>
         </div>
+
+        <div class="pop-up__card card-4">
+          <div class="pop-up__tabs">
+            <h3 class="pop-up__tabs-title">Группы</h3>
+          </div>
+          <div class="pop-up__row-card row-card-4 row-card-groups">
+            <div class="row-card-groups__item">Сдано в аренду</div>
+            <div class="row-card-groups__item">Помещения для аренды</div>
+            <div class="row-card-groups__item">Офис класса А</div>
+            <div class="row-card-groups__item">Москва Сити</div>
+            <div class="row-card-groups__item">Помещения для аренды</div>
+            <div class="row-card-groups__item">Офис класса А</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-  <!-- ======== Spoiler ======== -->
-  <!-- <script src="js/plugins_spollers_acordeon.min.js"></script> -->
-
-  <!-- ======== Switch item menu in slider ======== -->
-  <!-- <script src="js/plugins_switch_slider_menu_item.min.js"></script> -->
-
-  <!-- ======== Switch item menu in slider for 3 item ======== -->
-  <!-- <script src="js/plugins_switch_slider_menu_item_for_3.min.js"></script> -->
-
-  <!-- ======== Swiper ======== -->
-  <!-- <script src="plugins/swiper/dist/swiper_bundle.min.js"></script> -->
-  <!-- ======== Init slider for index ======== -->
-  <!-- <script src="plugins/swiper/js/slider_init_index.min.js"></script> -->
-
-  <!-- ======== Init slider for other page======== -->
-  <!-- <script src="plugins/swiper/js/slider_init_version_2.min.js"></script> -->
-
-  <!-- ======== AOS Script ======== -->
-  <!-- <script src="plugins/aos/dist/aos.min.js"></script> -->
-
-  <!-- ======== AOS Script Init ======== -->
-  <!-- <script src="plugins/aos/js/aos_init.min.js"></script> -->
-
-  <!-- ======== Anime Script  ======== -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script> -->
-
-  <!-- ======== Anime Script Init ======== -->
-  <!-- <script src="plugins/anime/anime_init.js"></script> -->
-
-  <!-- ======== Bootstrap script ======== -->
-  <!-- <script src="plugins/bootstrap_5.1.0/dist/js/bootstrap.min.js"></script> -->
-
-  <!-- ======== Parallax effect ======== -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
 
   <!-- ======== Main Script ======== -->
   <script src="js/app.min.js"></script>

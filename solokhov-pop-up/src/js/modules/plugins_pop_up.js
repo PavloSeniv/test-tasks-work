@@ -1,10 +1,12 @@
 export function popUp(params) {
-  let popupBg = document.querySelector(".__container"); // Фон попап окна
-  let popup = document.querySelector(".block-pop-up-modal"); // Само окно
-  let closePopupButton = document.querySelector(".close-popup"); //  Кнопка для скрытия окна
-  let openPopupButtonsAll = document.querySelectorAll(".open-popup"); // Кнопки для показа окна
-  let openPopupButtons = document.querySelector(".open-popup"); // Кнопки для показа окна
-  let openPopupBlock = document.querySelector(".block-button-show-modal");
+  let popupBg = document.querySelector(".pop-up__bg-container"); // Фон попап окна
+  let popup = document.querySelector(".pop-up"); // Само окно
+  let closePopupButton = document.querySelector(".pop-up__close"); //  Кнопка для скрытия окна
+  let openPopupButtonsAll = document.querySelectorAll(
+    ".main__button-open-pop-up"
+  ); // Кнопки для показа окна
+  let openPopupButtons = document.querySelector(".main__button-open-pop-up"); // Кнопки для показа окна
+  let openPopupBlock = document.querySelector(".main__container");
 
   openPopupButtonsAll.forEach((button) => {
     // Перебираем все кнопки

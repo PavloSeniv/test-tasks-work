@@ -12,46 +12,15 @@
 
 /*-------- Import Start -------*/
 @import "_fonts";
-//@import "_libs";
-@import "_media";
 @import "_nullstyle";
-@import "_vars";
 @import "_mixin";
-@import "_vars";
-// @import "header/_style_header";
-// @import "footer/_style_footer";
 /*-------- Import End -------*/
 
 /*-------- Page Index Start -------*/
-
 /*-------- All Start -------*/
-* {
-  color: #000000;
-}
-
 ::selection {
   color: #ffffff;
   background-color: #000;
-}
-
-.__container {
-  display: none;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 46px 39px;
-  background-color: #acacac;
-  opacity: 0; // Скрываем фон и сам попап
-  pointer-events: none; // Запрещаем ему быть целью событий
-
-  &.active {
-    display: block;
-    // При добавлении класса 'active'
-    opacity: 1; // Показываем фон и попап
-    pointer-events: all; // Возвращаем события
-    transition: 0.5s all;
-  }
-  @media (max-width: 1199px) {
-  }
 }
 
 ::-webkit-scrollbar {
@@ -78,72 +47,98 @@
 /*-------- All End -------*/
 
 /*-------- Main Start -------*/
-.block-button-show-modal {
+.main {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    &.active {
+      display: none;
+    }
+  }
+
+  &__button-open-pop-up {
+    display: block;
+    height: 34px;
+    padding: 9px 10px;
+    border-radius: 10px;
+    border: solid 1px #979797;
+    background-color: #d8d8d8;
+    font-family: TimesNewRomanPSMT;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-size: 15px;
+    color: #000;
+
+    &.active {
+      display: none;
+    }
+    &:hover {
+      background-color: #979797;
+      color: #fff;
+    }
+  }
+}
+
+.__container-1 {
   max-width: 1920px;
   margin: 0 auto;
   background-color: #ffffff;
-  display: flex;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+}
+/*-------- Main End -------*/
+
+/*-------- Pop Up Start -------*/
+.__container-2 {
+  padding: 46px 39px;
+  background-color: #acacac;
+}
+
+.pop-up {
+  display: none;
+  opacity: 0; // Скрываем фон и сам попап
+  pointer-events: none; // Запрещаем ему быть целью событий
+
   &.active {
-    display: none;
+    // При добавлении класса 'active'
+    display: block;
+    opacity: 1; // Показываем фон и попап
+    pointer-events: all; // Возвращаем события
+    transition: 0.5s all;
   }
-}
 
-.open-popup {
-  height: 34px;
-  padding: 9px 10px;
-  border-radius: 10px;
-  border: solid 1px #979797;
-  background-color: #d8d8d8;
-
-  font-family: times;
-  font-size: 15px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #000;
-  display: block;
-  &.active {
-    display: none;
+  &__bg-container {
+    max-width: 1920px;
+    margin: 0 auto;
   }
-}
 
-.block-pop-up-modal {
-  max-width: 1842px;
-  width: 100%;
-  margin: 0 auto;
-  @media (max-width: 1199px) {
+  &__dialog {
+    max-width: 1842px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 20px 20px 60px;
+    position: relative;
   }
-}
 
-.modal {
-  background-color: #fff;
-  padding: 30px 20px 20px 60px;
-  position: relative;
-}
-
-.block-pop-up {
   &__title {
     width: 80%;
     height: 16px;
-  }
-
-  &__title-data {
     display: flex;
     column-gap: 5px;
   }
 
-  &__title-data-tower-block {
+  &__data-tower {
   }
 
-  &__title-data-tower-title {
-    font-family: times;
+  &__data-tower-title {
+    font-family: TimesNewRomanPSMT;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -152,8 +147,8 @@
     text-decoration: underline;
   }
 
-  &__title-data-tower-sub-title {
-    font-family: times;
+  &__data-tower-sub-title {
+    font-family: TimesNewRomanPSMT;
     font-size: 10px;
     font-weight: normal;
     font-stretch: normal;
@@ -164,13 +159,13 @@
     text-transform: uppercase;
   }
 
-  &__title-data-square-block {
+  &__data-square {
   }
 
-  &__title-data-square-title {
-    font-family: times;
+  &__data-square-title {
+    font-family: TimesNewRomanPSMT;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -178,8 +173,8 @@
     color: #000;
   }
 
-  &__title-data-square-sub-title {
-    font-family: times;
+  &__data-square-sub-title {
+    font-family: TimesNewRomanPSMT;
     font-size: 10px;
     font-weight: normal;
     font-stretch: normal;
@@ -197,29 +192,33 @@
     &:hover {
       cursor: pointer;
     }
+    & svg:hover {
+      transform: scale(1.1);
+      transition: all 0.5s linear;
+    }
   }
 
-  &__column {
-    // display: flex;
-    // width: 100%;
-    // margin-top: 47px;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // row-gap: 56px;
-    // column-gap: 106px;
+  &__row {
     display: grid;
     width: 100%;
     margin-top: 47px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 64px;
-    grid-row-gap: 56px;
+    grid-row-gap: 49px;
     grid-template-areas:
       "card-1 card-2"
       "card-3 card-4"
       "card-3 card-4";
+
     @media (max-width: 1499px) {
+      grid-column-gap: 44px;
     }
+
+    @media (max-width: 1399px) {
+      justify-content: flex-end;
+    }
+
     @media (max-width: 1199px) {
       grid-template-columns: 1fr;
       grid-template-areas:
@@ -233,9 +232,11 @@
 
   &__card {
     max-width: 802px;
+    width: 100%;
     height: max-content;
   }
-  &__card-parallelogram-head {
+
+  &__tabs {
     position: relative;
     top: 1px;
     display: inline-flex;
@@ -264,8 +265,8 @@
     }
   }
 
-  &__card-title {
-    font-family: times;
+  &__tabs-title {
+    font-family: TimesNewRomanPSBoldMT;
     font-size: 15px;
     font-weight: bold;
     font-stretch: normal;
@@ -275,20 +276,76 @@
     color: #000;
   }
 
-  &__card-column {
+  &__row-card {
     border: solid 1px #979797;
     display: flex;
     width: 100%;
+    justify-content: space-between;
+
+    @media (max-width: 1499px) {
+      column-gap: 10px;
+    }
   }
 
-  &__card-column-button {
+  &__card-list-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    row-gap: 22px;
+    font-family: TimesNewRomanPSMT;
+    font-size: 15px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+
+    @media (max-width: 1399px) {
+      justify-content: flex-end;
+    }
+  }
+
+  &__placeholder {
+    background-color: #d8d8d8;
+    height: 11px;
+  }
+
+  &__card-list-2 {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    row-gap: 22px;
+    font-family: TimesNewRomanPSBoldMT;
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000;
+    @media (max-width: 1399px) {
+      justify-content: space-between;
+    }
+  }
+}
+
+.row-card-groups {
+  display: flex;
+  row-gap: 22px;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  &__item {
     height: 34px;
     padding: 9px 10px;
     border-radius: 10px;
     border: solid 1px #979797;
     background-color: #d8d8d8;
-
-    font-family: times;
+    font-family: TimesNewRomanPSMT;
     font-size: 15px;
     font-weight: normal;
     font-stretch: normal;
@@ -297,83 +354,22 @@
     letter-spacing: normal;
     color: #000;
   }
-
-  &__card-column-data {
-    text-align: left;
-    flex: 0 0 50%;
-    font-family: times;
-    font-size: 15px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000;
-  }
-
-  &__card-column-data-adress {
-  }
-
-  &__card-column-data-count-square {
-    margin-top: 22px;
-  }
-
-  &__card-column-data-count-auto {
-    margin-top: 22px;
-  }
-
-  &__card-column-data-placeholder {
-    margin-top: 22px;
-    background-color: #d8d8d8;
-    height: 11px;
-  }
-
-  &__card-column-user-data {
-    flex: 0 0 50%;
-    font-family: times;
-    font-size: 15px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-
-  &__card-column-user-data-adress {
-  }
-
-  &__card-column-user-data-count-square {
-    margin-top: 22px;
-  }
-
-  &__card-column-userdata-count-auto {
-    margin-top: 22px;
-  }
-
-  &__card-column-user-data-placeholder {
-    margin-top: 22px;
-    background-color: #d8d8d8;
-    height: 11px;
-  }
-}
-.card-column-1{
-padding: 38px 60px 74px 55px;
 }
 
-.card-column-2{
-padding: 38px 60px 39.5px 55px;
+.row-card-1 {
+  padding: 38px 60px 74px 55px;
 }
 
-.card-column-3{
-padding: 38px 60px 39px 55px;
+.row-card-2 {
+  padding: 38px 60px 33.5px 55px;
 }
-.card-column-4{
-padding: 38px 60px 154.5px 55px;
+
+.row-card-3 {
+  padding: 38px 60px 39px 55px;
+}
+
+.row-card-4 {
+      padding: 29px 60px 154.5px 49px;
 }
 
 .card-1 {
@@ -391,9 +387,18 @@ padding: 38px 60px 154.5px 55px;
 .card-4 {
   grid-area: card-4;
   position: relative;
-  top: -133px;
+  top: -129px;
   left: 2px;
   grid-area: card-4;
+ 
+}
+
+.card-2-list-1 {
+  row-gap: 20px !important;
+}
+
+.card-2-list-2 {
+  row-gap: 20px !important;
 }
 
 .placeholder-1 {
@@ -444,10 +449,37 @@ padding: 38px 60px 154.5px 55px;
   width: 139px;
 }
 
-.button-block {
-  display: flex;
-  row-gap: 20px;
-  column-gap: 30px;
-  flex-wrap: wrap;
+.placeholder-13 {
+  width: 209px;
 }
-/*-------- Main End -------*/
+
+.placeholder-14 {
+  width: 186px;
+}
+
+.placeholder-15 {
+  width: 224px;
+}
+
+.placeholder-16 {
+  width: 272px;
+}
+
+.placeholder-17 {
+  width: 116px;
+}
+
+.placeholder-18 {
+  width: 93px;
+}
+
+.placeholder-19 {
+  width: 139px;
+}
+
+.placeholder-20 {
+  width: 163px;
+}
+
+/*-------- Pop Up End -------*/
+/*-------- Page Index End -------*/
