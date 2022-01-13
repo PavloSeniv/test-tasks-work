@@ -268,17 +268,25 @@ h6 {
   cursor: pointer;
 }
 .block-pop-up__column {
-  display: flex;
+  display: grid;
   width: 100%;
   margin-top: 47px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 56px;
-  column-gap: 106px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 64px;
+  grid-row-gap: 56px;
+  grid-template-areas: "card-1 card-2" "card-3 card-4" "card-3 card-4";
+}
+@media (max-width: 1199px) {
+  .block-pop-up__column {
+    grid-template-columns: 1fr;
+    grid-template-areas: "card-1" "card-2" "card-3" "card-4";
+    justify-items: center;
+  }
 }
 .block-pop-up__card {
-  width: 802px;
-  height: 452px;
+  max-width: 802px;
+  height: max-content;
 }
 .block-pop-up__card-parallelogram-head {
   position: relative;
@@ -319,7 +327,6 @@ h6 {
 }
 .block-pop-up__card-column {
   border: solid 1px #979797;
-  padding: 38px 60px 74px 55px;
   display: flex;
   width: 100%;
 }
@@ -388,11 +395,40 @@ h6 {
   height: 11px;
 }
 
-.button-block {
-  display: flex;
-  row-gap: 20px;
-  column-gap: 30px;
-  flex-wrap: wrap;
+.card-column-1 {
+  padding: 38px 60px 74px 55px;
+}
+
+.card-column-2 {
+  padding: 38px 60px 39.5px 55px;
+}
+
+.card-column-3 {
+  padding: 38px 60px 39px 55px;
+}
+
+.card-column-4 {
+  padding: 38px 60px 154.5px 55px;
+}
+
+.card-1 {
+  grid-area: card-1;
+}
+
+.card-2 {
+  grid-area: card-2;
+}
+
+.card-3 {
+  grid-area: card-3;
+}
+
+.card-4 {
+  grid-area: card-4;
+  position: relative;
+  top: -133px;
+  left: 2px;
+  grid-area: card-4;
 }
 
 .placeholder-1 {
@@ -441,6 +477,13 @@ h6 {
 
 .placeholder-12 {
   width: 139px;
+}
+
+.button-block {
+  display: flex;
+  row-gap: 20px;
+  column-gap: 30px;
+  flex-wrap: wrap;
 }
 
 /*-------- Main End -------*/
