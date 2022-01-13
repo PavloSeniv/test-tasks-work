@@ -615,11 +615,29 @@ h6 {
 
 /*-------- Page Index End -------*/
 
-@media (max-width: 1499px) {
-  .pop-up__row {
-    grid-column-gap: 44px;
+@media (max-width: 1919px) {
+  .__container-2 {
+    padding: 1vmax;
+  }
+}
+
+@media (max-width: 1879px) {
+  .pop-up__dialog {
+    padding: 1vmax;
   }
 
+  .pop-up__row {
+    grid-column-gap: 1vw;
+  }
+}
+
+@media (max-width: 1689px) {
+  .card-4 {
+    top: -135px;
+  }
+}
+
+@media (max-width: 1499px) {
   .pop-up__row-card {
     -moz-column-gap: 10px;
          column-gap: 10px;
@@ -629,6 +647,7 @@ h6 {
 @media (max-width: 1399px) {
   .pop-up__row {
     justify-content: flex-end;
+    grid-row-gap: 29px;
   }
 
   .pop-up__card-list-1 {
@@ -640,12 +659,30 @@ h6 {
   }
 }
 
+@media (max-width: 1319px) {
+  .pop-up__tabs {
+    padding: 2vmax;
+  }
+
+  .row-card-1 {
+    padding: 2vmax;
+  }
+
+  .card-4 {
+    top: -72px;
+  }
+}
+
 @media (max-width: 1199px) {
   .pop-up__row {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
         grid-template-areas: "card-1" "card-2" "card-3" "card-4";
     justify-items: center;
+  }
+
+  .card-4 {
+    position: static;
   }
   .card-1 {
     -ms-grid-row: 1;

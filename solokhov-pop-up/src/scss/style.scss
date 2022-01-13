@@ -13,7 +13,6 @@
 /*-------- Import Start -------*/
 @import "_fonts";
 @import "_nullstyle";
-@import "_mixin";
 /*-------- Import End -------*/
 
 /*-------- Page Index Start -------*/
@@ -96,6 +95,9 @@
 .__container-2 {
   padding: 46px 39px;
   background-color: #acacac;
+  @media (max-width: 1919px) {
+    padding: 1vmax;
+  }
 }
 
 .pop-up {
@@ -123,6 +125,10 @@
     background-color: #fff;
     padding: 30px 20px 20px 60px;
     position: relative;
+
+    @media (max-width: 1879px) {
+      padding: 1vmax;
+    }
   }
 
   &__title {
@@ -231,12 +237,13 @@
       "card-3 card-4"
       "card-3 card-4";
 
-    @media (max-width: 1499px) {
-      grid-column-gap: 44px;
+    @media (max-width: 1879px) {
+      grid-column-gap: 1vw;
     }
 
     @media (max-width: 1399px) {
       justify-content: flex-end;
+      grid-row-gap: 29px;
     }
 
     @media (max-width: 1199px) {
@@ -282,6 +289,10 @@
       background: #fff;
       transform: perspective(1.5em) rotateX(2deg);
       transform-origin: bottom left;
+    }
+
+    @media (max-width: 1319px) {
+      padding: 2vmax;
     }
   }
 
@@ -378,6 +389,9 @@
 
 .row-card-1 {
   padding: 38px 60px 74px 55px;
+  @media (max-width: 1319px) {
+    padding: 2vmax;
+  }
 }
 
 .row-card-2 {
@@ -410,6 +424,18 @@
   top: -129px;
   left: 2px;
   grid-area: card-4;
+
+  @media (max-width: 1689px) {
+    top: -135px;
+  }
+
+  @media (max-width: 1319px) {
+    top: -72px;
+  }
+
+  @media (max-width: 1199px) {
+    position: static;
+  }
 }
 
 .tabs-1 {
