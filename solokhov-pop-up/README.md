@@ -8,7 +8,7 @@ My solokhov-pop-up
 
 ## Demo
 
-https://pavloseniv.github.io/gulp-build-2022/gulp-build-2022/index.html
+https://pavloseniv.github.io/test-tasks-work/solokhov-pop-up/solokhov-pop-up/index.html
 
 ## Screenshots
 
