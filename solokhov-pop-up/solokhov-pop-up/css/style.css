@@ -660,16 +660,44 @@ h6 {
 }
 
 @media (max-width: 1319px) {
-  .pop-up__tabs {
-    padding: 2vmax;
-  }
-
   .row-card-1 {
     padding: 2vmax;
+    padding-bottom: 74px;
+  }
+
+  .row-card-2 {
+    padding: 2vmax;
+    padding-bottom: 33.5px;
+  }
+
+  .row-card-3 {
+    padding: 2vmax;
+    padding-bottom: 39px;
+  }
+
+  .row-card-4 {
+    padding: 2vmax;
+    padding-bottom: 154.5px;
   }
 
   .card-4 {
     top: -72px;
+  }
+
+  .tabs-1 {
+    padding: 14px 63px 14px 2vmax;
+  }
+
+  .tabs-2 {
+    padding: 14px 56px 14px 2vmax;
+  }
+
+  .tabs-3 {
+    padding: 14px 56px 14px 2vmax;
+  }
+
+  .tabs-4 {
+    padding: 18px 60px 14px 2vmax;
   }
 }
 

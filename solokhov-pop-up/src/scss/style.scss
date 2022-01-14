@@ -290,10 +290,6 @@
       transform: perspective(1.5em) rotateX(2deg);
       transform-origin: bottom left;
     }
-
-    @media (max-width: 1319px) {
-      padding: 2vmax;
-    }
   }
 
   &__tabs-title {
@@ -391,19 +387,32 @@
   padding: 38px 60px 74px 55px;
   @media (max-width: 1319px) {
     padding: 2vmax;
+    padding-bottom: 74px;
   }
 }
 
 .row-card-2 {
   padding: 38px 60px 33.5px 55px;
+  @media (max-width: 1319px) {
+    padding: 2vmax;
+    padding-bottom: 33.5px;
+  }
 }
 
 .row-card-3 {
   padding: 38px 60px 39px 55px;
+  @media (max-width: 1319px) {
+    padding: 2vmax;
+    padding-bottom: 39px;
+  }
 }
 
 .row-card-4 {
   padding: 29px 60px 154.5px 49px;
+  @media (max-width: 1319px) {
+    padding: 2vmax;
+    padding-bottom: 154.5px;
+  }
 }
 
 .card-1 {
@@ -440,26 +449,45 @@
 
 .tabs-1 {
   padding: 14px 73px 14px 56px;
+
+  @media (max-width: 1319px) {
+    padding: 14px 63px 14px 2vmax;
+  }
 }
 
 .tabs-2 {
   padding: 14px 76px 14px 56px;
+
   &::before {
     transform: perspective(1.5em) rotateX(2.8deg);
+  }
+
+  @media (max-width: 1319px) {
+    padding: 14px 56px 14px 2vmax;
   }
 }
 
 .tabs-3 {
   padding: 14px 56px 14px 56px;
+
   &::before {
     transform: perspective(1.5em) rotateX(1.5deg);
+  }
+
+  @media (max-width: 1319px) {
+    padding: 14px 56px 14px 2vmax;
   }
 }
 
 .tabs-4 {
   padding: 18px 80px 14px 55px;
+
   &::before {
     transform: perspective(1.5em) rotateX(2.6deg);
+  }
+
+  @media (max-width: 1319px) {
+    padding: 18px 60px 14px 2vmax;
   }
 }
 
