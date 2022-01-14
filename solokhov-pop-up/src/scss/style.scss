@@ -386,32 +386,28 @@
 .row-card-1 {
   padding: 38px 60px 74px 55px;
   @media (max-width: 1319px) {
-    padding: 2vmax;
-    padding-bottom: 74px;
+    padding: 38px 2vmax 74px 2vmax;
   }
 }
 
 .row-card-2 {
   padding: 38px 60px 33.5px 55px;
   @media (max-width: 1319px) {
-    padding: 2vmax;
-    padding-bottom: 33.5px;
+    padding: 38px 2vmax 33.5px 2vmax;
   }
 }
 
 .row-card-3 {
   padding: 38px 60px 39px 55px;
   @media (max-width: 1319px) {
-    padding: 2vmax;
-    padding-bottom: 39px;
+    padding: 38px 2vmax 39px 2vmax;
   }
 }
 
 .row-card-4 {
   padding: 29px 60px 154.5px 49px;
   @media (max-width: 1319px) {
-    padding: 2vmax;
-    padding-bottom: 154.5px;
+    padding: 29px 2vmax 154.5px 2vmax;
   }
 }
 
@@ -439,7 +435,7 @@
   }
 
   @media (max-width: 1319px) {
-    top: -72px;
+    top: -127px;
   }
 
   @media (max-width: 1199px) {

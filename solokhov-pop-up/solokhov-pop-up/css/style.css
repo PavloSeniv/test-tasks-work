@@ -661,27 +661,23 @@ h6 {
 
 @media (max-width: 1319px) {
   .row-card-1 {
-    padding: 2vmax;
-    padding-bottom: 74px;
+    padding: 38px 2vmax 74px 2vmax;
   }
 
   .row-card-2 {
-    padding: 2vmax;
-    padding-bottom: 33.5px;
+    padding: 38px 2vmax 33.5px 2vmax;
   }
 
   .row-card-3 {
-    padding: 2vmax;
-    padding-bottom: 39px;
+    padding: 38px 2vmax 39px 2vmax;
   }
 
   .row-card-4 {
-    padding: 2vmax;
-    padding-bottom: 154.5px;
+    padding: 29px 2vmax 154.5px 2vmax;
   }
 
   .card-4 {
-    top: -72px;
+    top: -127px;
   }
 
   .tabs-1 {
